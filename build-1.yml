@@ -1,0 +1,32 @@
+name: Build APK
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:   # Elle de tetiklenebilir
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kodu çek
+        uses: actions/checkout@v3
+
+      - name: Java 17 kur
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Gradle izinlerini ver
+        run: chmod +x gradlew
+
+      - name: APK derle
+        run: ./gradlew assembleDebug
+
+      - name: APK'yı yükle (indir)
+        uses: actions/upload-artifact@v3
+        with:
+          name: DisableFlagSecure-debug
+          path: app/build/outputs/apk/debug/app-debug.apk

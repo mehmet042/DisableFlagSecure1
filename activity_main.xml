@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F5F5F5">
+
+    <!-- Başlık -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🛡️ FLAG_SECURE Demo"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A2E"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLAG_SECURE'u çalışma zamanında yönetin"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="40dp"/>
+
+    <!-- Durum Kutusu -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Durum kontrol ediliyor..."
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@android:color/darker_gray"/>
+
+    <!-- Butonlar -->
+    <Button
+        android:id="@+id/btnEnable"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="🔒  FLAG_SECURE ETKİNLEŞTİR"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#D32F2F"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnDisable"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="🔓  FLAG_SECURE DEVRE DIŞI BIRAK"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#388E3C"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="🔍  MEVCUT DURUMU KONTROL ET"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#1565C0"/>
+
+    <!-- Bilgi Notu -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ℹ️  FLAG_SECURE etkinken ekran görüntüsü almak veya ekranı kaydetmek engellenir. Sadece kendi uygulamanızdaki window üzerinde çalışır."
+        android:textSize="12sp"
+        android:textColor="#777777"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:lineSpacingMultiplier="1.4"/>
+
+</LinearLayout>
